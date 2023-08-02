@@ -7,13 +7,9 @@ function SalesPersonHistory() {
 
   const handleSearchChange = (event) => setSearch(event.target.value);
 
-  const handleSearch = () => {
-    setFilter(
-      sales.filter(
-        (sale) => !search || sale.salesperson.first_name.includes(search)
-      )
-    );
-  };
+    const handleSearch = () => {
+        setFilter(sales.filter(sale => !search || sale.salesperson.first_name.includes(search)));
+    }
 
   const fetchsalesPersonData = async (id) => {
     const salespersonUrl = `http://localhost:8090/api/salespeople${id}/`;

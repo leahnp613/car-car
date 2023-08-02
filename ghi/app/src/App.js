@@ -40,12 +40,12 @@ function App() {
             <Route path="/sales/new" element={<SalesForm />} />
           </Route>
           <Route path="/customers/new" element={<CustomerForm />} />
-          <Route path="sales_persons/new" element={<SalesPersonForm />} />
-          <Route path="services" />
+          <Route path="/sales_persons/new" element={<SalesPersonForm />} />
+          <Route path="/services" />
           <Route index element={<AppointmentList />} />
-          <Route path="new" element={<AppointmentForm />} />
-          <Route path="history" element={<ServiceHistory />}>
-            <Route path="history/technician/new" element={<TechnicianForm />} />
+          <Route path="/new" element={<AppointmentForm />} />
+          <Route path="/history" element={<ServiceHistory />}>
+            <Route path="/history/technician/new" element={<TechnicianForm />} />
           </Route>
         </Routes>
       </div>

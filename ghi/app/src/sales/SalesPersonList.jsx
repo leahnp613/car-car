@@ -32,41 +32,34 @@ function SalesPersonList() {
     deleteSalesPerson();
   }, []);
 
-  return (
-    <div className="container">
-      <h1>Sales Person Records</h1>
-      <div className="mb-3"></div>
-      <table className="table table-striped">
-        <thead>
-          <tr>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Employee ID</th>
-          </tr>
-        </thead>
-        <tbody>
-          {salesPerson.map((salesPerson) => {
-            return (
-              <tr key={salesPerson.id}>
-                <td>{salesPerson.first_name}</td>
-                <td>{salesPerson.last_name}</td>
-                <td>{salesPerson.employee_id}</td>
-                <td>
-                  <button
-                    onClick={() => deleteSalesPerson(salesPerson.id)}
-                    type="button"
-                    className="btn btn-danger"
-                  >
-                    {" "}
-                    Delete
-                  </button>
-                </td>
-              </tr>
-            );
-          })}
-        </tbody>
-      </table>
-    </div>
-  );
+    return (
+        <div className="container">
+           <h1>Sales Person Records</h1>
+              <div className="mb-3">
+                </div>
+                <table className='table table-striped'>
+                    <thead>
+                        <tr>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Employee ID</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {salesPerson((customer) => {
+                        }).map(salesPerson => {
+                            return (
+                                <tr key={salesPerson.id}>
+                                    <td>{salesPerson.first_name}</td>
+                                    <td>{salesPerson.last_name}</td>
+                                    <td>{salesPerson.employee_id}</td>
+                                    <td><button onClick={() => deleteSalesPerson(salesPerson.id)} type="button" className="btn btn-danger">Delete</button></td>
+                                </tr>
+                            );
+                        })}
+                    </tbody>
+                </table>
+            </div>
+    );
 }
 export default SalesPersonList;

@@ -17,3 +17,5 @@ urlpatterns = [
     path("technician/", api_list_technician, name="api_list_technician"),
     path("technician/<int:pk>/", api_show_technician, name="api_show_technician"),
 ]
+
+]
